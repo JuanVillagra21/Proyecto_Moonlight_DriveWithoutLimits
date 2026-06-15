@@ -41,6 +41,7 @@ PC
 Windows 10 o superior.
 Teclado.
 Resolución recomendada: 1920 × 1080.
+
 Instrucciones de ejecución
 
 Android
