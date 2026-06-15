@@ -19,6 +19,7 @@ Características:
 Menú principal.
 Gameplay.
 Movimiento mediante acelerómetro.
+
 Rama secundaria (adaptacionPC)
 
 Contiene la adaptación del juego para PC.
