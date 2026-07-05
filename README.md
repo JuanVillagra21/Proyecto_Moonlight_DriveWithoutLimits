@@ -67,4 +67,5 @@ Motor utilizado
 Unity 2023.2.22f1.
 
 Integrantes
+
 Juan Ignacio Villagra
