@@ -8,7 +8,9 @@ public class ControlAcelerometro : MonoBehaviour
     public float factorDeVelocidadX = 25.0f;
     public float factorDeVelocidadY = 25.0f;
 
-   
+    // Límites de la pista
+    private float limiteIzquierdo = -17f;
+    private float limiteDerecho = 15f;
 
     // Update is called once per frame
     void Update()
@@ -18,6 +20,9 @@ public class ControlAcelerometro : MonoBehaviour
         dir.x = -Input.acceleration.x;
         dir.y = Input.acceleration.y;
         dir.z = Input.acceleration.z;
+
+        // Evita que el auto retroceda
+        dir.y = Mathf.Min(0f, dir.y);
 
         //Debug.Log(dir.x.ToString());
 
@@ -32,7 +37,10 @@ public class ControlAcelerometro : MonoBehaviour
             dir.y * -factorDeVelocidadY,
             0));
 
-        
+        // Limitar movimiento dentro de la pista
+        Vector3 posicion = transform.position;
+        posicion.x = Mathf.Clamp(posicion.x, limiteIzquierdo, limiteDerecho);
+        transform.position = posicion;
     }
 
     Vector3 GetAccelerometerValue()
@@ -52,5 +60,13 @@ public class ControlAcelerometro : MonoBehaviour
         }
 
         return acc;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Meta"))
+        {
+            FindObjectOfType<ControladorDeTiempo>().GanarJuego();
+        }
     }
 }

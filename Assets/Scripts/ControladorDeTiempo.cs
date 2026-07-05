@@ -9,6 +9,7 @@ public class ControladorDeTiempo : MonoBehaviour
     public float tiempoLimite = 35.0f;
     private float tiempoRestante;
     public TextMeshProUGUI mensajeVictoria; // Referencia al objeto de texto de victoria
+    private bool juegoTerminado = false;
 
     public delegate void VictoriaEventHandler();
     public event VictoriaEventHandler OnVictoria;
@@ -21,30 +22,45 @@ public class ControladorDeTiempo : MonoBehaviour
 
     void Update()
     {
+        if (juegoTerminado)
+            return;
+
         tiempoRestante -= Time.deltaTime;
 
         if (tiempoRestante <= 0)
         {
-            // El jugador ha ganado el juego
-            if (OnVictoria != null)
-            {
-                OnVictoria();
-            }
-            MostrarMensajeDeVictoria(); // Llama a la función para mostrar el mensaje
+            juegoTerminado = true;
+            tiempoRestante = 0;
+
+            // Cambiá este nombre por tu escena de derrota por tiempo
+            SceneManager.LoadScene("Perdiste");
         }
+    }
+
+    public void GanarJuego()
+    {
+        if (juegoTerminado)
+            return;
+
+        juegoTerminado = true;
+
+        if (OnVictoria != null)
+        {
+            OnVictoria();
+        }
+
+        MostrarMensajeDeVictoria();
     }
 
     void MostrarMensajeDeVictoria()
     {
-        mensajeVictoria.gameObject.SetActive(true); // Activa el mensaje de victoria
-        // Puedes agregar más lógica aquí, como animaciones o efectos visuales
+        mensajeVictoria.gameObject.SetActive(true);
 
-        // Carga la escena de victoria después de un breve retraso (por ejemplo, después de 3 segundos)
-        Invoke("CargarEscenaDeVictoria", 3.0f);
+        Invoke("CargarEscenaDeVictoria", 1.0f);
     }
 
     void CargarEscenaDeVictoria()
     {
-        SceneManager.LoadScene("Victoria"); // Carga la escena de victoria
+        SceneManager.LoadScene("Victoria");
     }
 }
