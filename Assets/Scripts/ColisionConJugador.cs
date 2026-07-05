@@ -24,7 +24,7 @@ public class ColisionConJugador : MonoBehaviour
             int indiceEscena = Random.Range(0, 3); // Cambia 3 según la cantidad de escenas
 
             // Crear un array con los nombres de tus escenas de "perdiste"
-            string[] nombresEscenasPerdiste = { "Perdiste", "Perdiste 2", "Perdiste 3" }; // Reemplaza con los nombres reales
+            string[] nombresEscenasPerdiste = {"Perdiste 2", "Perdiste 3" , "Perdiste 4"}; // Reemplaza con los nombres reales
 
             // Obtener el nombre de la escena seleccionada
             string nombreEscenaSeleccionada = nombresEscenasPerdiste[indiceEscena];

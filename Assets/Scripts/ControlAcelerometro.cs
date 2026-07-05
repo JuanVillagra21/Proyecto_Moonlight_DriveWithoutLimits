@@ -81,4 +81,12 @@ public class ControlAcelerometro : MonoBehaviour
         posicion.x = Mathf.Clamp(posicion.x, limiteIzquierdo, limiteDerecho);
         transform.position = posicion;
     }
+    // NUEVO: ganar al llegar a la meta
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Meta"))
+        {
+            FindObjectOfType<ControladorDeTiempo>().GanarJuego();
+        }
+    }
 }

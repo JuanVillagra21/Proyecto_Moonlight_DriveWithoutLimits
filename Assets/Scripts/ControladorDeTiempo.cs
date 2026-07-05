@@ -4,47 +4,67 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class ControladorDeTiempo : MonoBehaviour
 {
     public float tiempoLimite = 35.0f;
     private float tiempoRestante;
-    public TextMeshProUGUI mensajeVictoria; // Referencia al objeto de texto de victoria
+    public TextMeshProUGUI mensajeVictoria;
 
     public delegate void VictoriaEventHandler();
     public event VictoriaEventHandler OnVictoria;
 
+    private bool juegoTerminado = false;
+
     void Start()
     {
         tiempoRestante = tiempoLimite;
-        mensajeVictoria.gameObject.SetActive(false); // Asegúrate de que el mensaje de victoria esté desactivado al inicio
+        mensajeVictoria.gameObject.SetActive(false);
     }
 
     void Update()
     {
+        if (juegoTerminado)
+            return;
+
         tiempoRestante -= Time.deltaTime;
 
         if (tiempoRestante <= 0)
         {
-            // El jugador ha ganado el juego
-            if (OnVictoria != null)
-            {
-                OnVictoria();
-            }
-            MostrarMensajeDeVictoria(); // Llama a la función para mostrar el mensaje
+            juegoTerminado = true;
+            tiempoRestante = 0;
+
+            SceneManager.LoadScene("Perdiste");
         }
+    }
+
+    public void GanarJuego()
+    {
+        if (juegoTerminado)
+            return;
+
+        juegoTerminado = true;
+
+        if (OnVictoria != null)
+        {
+            OnVictoria();
+        }
+
+        MostrarMensajeDeVictoria();
     }
 
     void MostrarMensajeDeVictoria()
     {
-        mensajeVictoria.gameObject.SetActive(true); // Activa el mensaje de victoria
-        // Puedes agregar más lógica aquí, como animaciones o efectos visuales
+        mensajeVictoria.gameObject.SetActive(true);
 
-        // Carga la escena de victoria después de un breve retraso (por ejemplo, después de 3 segundos)
-        Invoke("CargarEscenaDeVictoria", 3.0f);
+        Invoke("CargarEscenaDeVictoria", 1.0f);
     }
 
     void CargarEscenaDeVictoria()
     {
-        SceneManager.LoadScene("Victoria"); // Carga la escena de victoria
+        SceneManager.LoadScene("Victoria");
     }
 }

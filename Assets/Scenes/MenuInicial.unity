@@ -1863,8 +1863,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Para completar el nivel, el jugador debe mantenerse sin chocar durante
-    un per\xEDodo de 35 segundos."
+  m_text: "Llega a la meta antes de que el tiempo llegue a cero. Evita chocar con
+    los dem\xE1s veh\xEDculos, ya que una colisi\xF3n provocar\xE1 la derrota."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -2205,7 +2205,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.258
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

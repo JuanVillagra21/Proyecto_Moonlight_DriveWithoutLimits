@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Perdiste 3.unity
     guid: 402fa83cf41764447bfeee523e1d66d2
   - enabled: 1
+    path: Assets/Scenes/Perdiste 4.unity
+    guid: 4c029d3d89dd8b740bd3713331c5d7a0
+  - enabled: 1
     path: Assets/Scenes/Victoria.unity
     guid: b1f82452295a12c46ad51538fa0e1fa3
   m_configObjects: {}
