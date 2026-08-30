@@ -1,71 +1,89 @@
-# Proyecto_Moonlight_DriveWithoutLimits
-Juego desarrollado en Unity para Android y adaptado posteriormente a PC como trabajo práctico de Diseño según Plataforma de Juego.
+# 🚗 Drive Without Limits
 
-Drive Without Limits
+> Videojuego desarrollado en Unity para Android y posteriormente adaptado a PC.
 
-Descripción
+## 🎮 Sobre el proyecto
 
-Drive Without Limits es un videojuego desarrollado en Unity en el que el jugador controla un automóvil y debe **llegar a la meta antes de que se agote el tiempo**, evitando colisionar con los demás vehículos.
+Drive Without Limits es un videojuego en el que el jugador controla un automóvil y debe llegar a la meta antes de que se agote el tiempo, evitando colisionar con otros vehículos.
 
-El proyecto fue desarrollado inicialmente para dispositivos Android y posteriormente adaptado para PC.
+El proyecto fue desarrollado inicialmente para Android utilizando controles mediante acelerómetro y posteriormente adaptado para PC mediante teclado.
 
-Estructura del repositorio
-Rama principal (main)
+## 🛠️ Tecnologías
 
-Contiene la versión base para Android.
+- Unity 2023.2.22f1
+- C#
+- Git / GitHub
+- Android
+- PC
 
-Características:
+## 👨‍💻 Desarrollo
 
-Menú principal.
-Gameplay.
-Movimiento mediante acelerómetro.
-Meta para finalizar el recorrido.
-Derrota por colisión.
-Derrota por tiempo.
+- Desarrollo del videojuego utilizando Unity y C#.
+- Implementación del movimiento del vehículo mediante acelerómetro para Android.
+- Adaptación del sistema de controles para PC mediante teclado.
+- Implementación del sistema de pausa.
+- Implementación de condiciones de victoria y derrota.
+- Adaptación de resolución y configuración del proyecto para PC.
 
+## 🎮 Características
 
-Rama secundaria (feature_adaptacionPC)
+- Menú principal.
+- Gameplay.
+- Movimiento mediante acelerómetro.
+- Controles mediante teclado.
+- Sistema de tiempo límite.
+- Colisiones con otros vehículos.
+- Condiciones de victoria y derrota.
+- Pantalla de pausa.
+- Adaptación para Android y PC.
 
-Contiene la adaptación del juego para PC.
+## 🎮 Controles
 
-Características:
+### 📱 Android
 
-Controles mediante teclado (W, A, S y D).
-Menú de pausa con la tecla ESC.
-Pantallas de victoria y derrota.
-Límites de la pista.
-Meta para finalizar el recorrido.
-Derrota por tiempo.
-Resolución adaptada a 1920 × 1080.
+Inclinar el dispositivo hacia la izquierda o derecha para controlar el vehículo.
 
-Requisitos
-Android
-Android 8.0 o superior.
-Dispositivo con acelerómetro.
+### 🖥️ PC
 
-PC
-Windows 10 o superior.
-Teclado.
-Resolución recomendada: 1920 × 1080.
+| Tecla | Acción |
+|---|---|
+| W | Avanzar |
+| A | Izquierda |
+| S | Retroceder |
+| D | Derecha |
+| ESC | Pausa |
 
-Instrucciones de ejecución
+## 📸 Capturas
 
-Android
-Instalar el archivo APK.
-Abrir la aplicación.
-Controlar el vehículo inclinando el dispositivo hacia la izquierda o la derecha.
-Llegar a la meta antes de que se agote el tiempo evitando colisionar con los demás vehículos.
+<!-- Agregar imágenes del juego -->
 
-PC
-Ejecutar el archivo .exe.
-Utilizar las teclas W, A, S y D para mover el vehículo.
-Utilizar la tecla ESC para pausar y reanudar el juego.
-Llegar a la meta antes de que se agote el tiempo evitando colisionar con los demás vehículos.
+## 🎥 Video
 
-Motor utilizado
+<!-- Agregar video/demo si tenés -->
 
-Unity 2023.2.22f1.
+## 📚 Documentación
 
-Integrantes
+- [Game Design Document](...)
+- [Technical Design Document](...)
+- [Documentación del proyecto](...)
 
-Juan Ignacio Villagra
+## 📦 Requisitos
+
+### Android
+- Android 8.0 o superior.
+- Dispositivo con acelerómetro.
+
+### PC
+- Windows 10 o superior.
+- Teclado.
+- Resolución recomendada: 1920 × 1080.
+
+## ▶️ Ejecución
+
+### Android
+
+Instalar el archivo APK y abrir la aplicación.
+
+### PC
+
+Ejecutar el archivo `.exe`.
