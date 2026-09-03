@@ -90,7 +90,7 @@ Para mantener la trazabilidad del proceso de portabilidad, el repositorio se est
 
 El proyecto incluye documentación técnica sobre el desarrollo y la adaptación multiplataforma:
 
-* 📄 [Documentación — Drive Without Limits](./Documentation/Documentacion%20Drive%20Without%20Limits.pdf)
+* 📄 [Documentación — Drive Without Limits](Documentacion_Drive_Without_Limits.pdf)
 
 ---
 
