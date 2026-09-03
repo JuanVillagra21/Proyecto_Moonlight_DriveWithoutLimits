@@ -56,7 +56,7 @@ El proyecto fue concebido originalmente para dispositivos móviles **Android**, 
 Para mantener la trazabilidad del proceso de portabilidad, el repositorio se estructuró en dos ramas principales:
 
 * `main`: Código y configuración del proyecto base orientado a **Android**.
-* `adaptacionPC`: Adaptación del proyecto para **PC**, incluyendo los controles mediante teclado, menú de pausa, resolución 1920 × 1080 y pantallas de victoria/derrota.
+* `feature_adaptacionPC`: Adaptación del proyecto para **PC**, incluyendo los controles mediante teclado, menú de pausa, resolución 1920 × 1080 y pantallas de victoria/derrota.
 
 ---
 
