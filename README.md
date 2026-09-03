@@ -1,89 +1,117 @@
 # 🚗 Drive Without Limits
 
-> Videojuego desarrollado en Unity para Android y posteriormente adaptado a PC.
+> Videojuego de conducción contrarreloj desarrollado en Unity, enfocado en el diseño multiplataforma y la adaptación de esquemas de entrada (Android ➔ PC).
 
-## 🎮 Sobre el proyecto
+---
 
-Drive Without Limits es un videojuego en el que el jugador controla un automóvil y debe llegar a la meta antes de que se agote el tiempo, evitando colisionar con otros vehículos.
+## 🎮 Sobre el Proyecto
 
-El proyecto fue desarrollado inicialmente para Android utilizando controles mediante acelerómetro y posteriormente adaptado para PC mediante teclado.
+**Drive Without Limits** es un juego de conducción contrarreloj en el que el jugador debe esquivar el tráfico vehicular y alcanzar la meta antes de que el cronómetro llegue a cero.
 
-## 🛠️ Tecnologías
+El proyecto fue concebido originalmente para dispositivos móviles **Android**, aprovechando el **acelerómetro** como método de control. Posteriormente, se llevó a cabo un proceso de portabilidad y adaptación para **PC (Windows)**, modificando el sistema de control, la interfaz, la resolución, los límites de pista y añadiendo un menú de pausa y pantallas de estado.
 
-- Unity 2023.2.22f1
-- C#
-- Git / GitHub
-- Android
-- PC
+---
 
-## 👨‍💻 Desarrollo
+## ✨ Características Principales
 
-- Desarrollo del videojuego utilizando Unity y C#.
-- Implementación del movimiento del vehículo mediante acelerómetro para Android.
-- Adaptación del sistema de controles para PC mediante teclado.
-- Implementación del sistema de pausa.
-- Implementación de condiciones de victoria y derrota.
-- Adaptación de resolución y configuración del proyecto para PC.
+* **Conducción:** Control del vehículo adaptado a dos sistemas de entrada diferentes: acelerómetro en Android y teclado en PC.
+* **Obstáculos y Tráfico:** Detección de colisiones contra otros vehículos en la pista.
+* **Sistema de Tiempo Límite:** Condición de victoria por llegada a la meta y derrota por tiempo agotado.
+* **Control de Flujo:** Menú principal, sistema de pausa en PC y pantallas de fin de juego (Victoria/Derrota).
+* **Adaptación Multiplataforma:** Ajustes de interfaz y resolución para la versión de PC, configurada a 1920 × 1080.
 
-## 🎮 Características
+---
 
-- Menú principal.
-- Gameplay.
-- Movimiento mediante acelerómetro.
-- Controles mediante teclado.
-- Sistema de tiempo límite.
-- Colisiones con otros vehículos.
-- Condiciones de victoria y derrota.
-- Pantalla de pausa.
-- Adaptación para Android y PC.
+## 🔄 Comparativa Multiplataforma
 
-## 🎮 Controles
+| Característica | 📱 Android | 🖥️ PC (Windows) |
+| :--- | :--- | :--- |
+| **Control principal** | Acelerómetro (inclinación) | Teclado (W, A, S, D) |
+| **Menú de Pausa** | — | Tecla `ESC` |
+| **Resolución** | Adaptada a dispositivo móvil | 1920 × 1080 |
+| **Distribución** | Paquete APK | Ejecutable (`.exe`) |
+
+---
+
+## 🕹️ Controles
 
 ### 📱 Android
 
-Inclinar el dispositivo hacia la izquierda o derecha para controlar el vehículo.
+* **Giro / Dirección:** Inclinar el dispositivo hacia la izquierda o hacia la derecha para orientar el vehículo.
 
 ### 🖥️ PC
 
 | Tecla | Acción |
-|---|---|
-| W | Avanzar |
-| A | Izquierda |
-| S | Retroceder |
-| D | Derecha |
-| ESC | Pausa |
+| :---: | :--- |
+| **W** | Acelerar / Avanzar |
+| **A** | Girar hacia la izquierda |
+| **S** | Frenar / Retroceder |
+| **D** | Girar hacia la derecha |
+| **ESC** | Pausar / Reanudar partida |
 
-## 📸 Capturas
+---
 
-<!-- Agregar imágenes del juego -->
+## 🌿 Gestión del Repositorio (Ramas)
 
-## 🎥 Video
+Para mantener la trazabilidad del proceso de portabilidad, el repositorio se estructuró en dos ramas principales:
 
-<!-- Agregar video/demo si tenés -->
+* `main`: Código y configuración del proyecto base orientado a **Android**.
+* `adaptacionPC`: Adaptación del proyecto para **PC**, incluyendo los controles mediante teclado, menú de pausa, resolución 1920 × 1080 y pantallas de victoria/derrota.
+
+---
+
+## 🛠️ Tecnologías
+
+* **Motor de desarrollo:** Unity 2023.2.22f1.
+* **Lenguaje de programación:** C#.
+* **Control de versiones:** Git & GitHub.
+* **Plataformas de destino:** Android | Windows (PC).
+
+---
+
+## 📦 Requisitos del Sistema
+
+### 📱 Android
+
+* **Sistema operativo:** Android 8.0 o superior.
+* **Hardware:** Dispositivo móvil con sensor de acelerómetro integrado.
+
+### 🖥️ PC
+
+* **Sistema operativo:** Windows 10 o superior (64 bits).
+* **Procesador:** CPU de 64 bits.
+* **Memoria RAM:** 4 GB.
+* **Periféricos:** Teclado.
+* **Resolución recomendada:** 1920 × 1080.
+
+---
 
 ## 📚 Documentación
 
-- [Game Design Document](...)
-- [Technical Design Document](...)
-- [Documentación del proyecto](...)
+El proyecto incluye documentación técnica sobre el desarrollo y la adaptación multiplataforma:
 
-## 📦 Requisitos
+* 📄 [Documentación — Drive Without Limits](./Documentation/Documentacion%20Drive%20Without%20Limits.pdf)
 
-### Android
-- Android 8.0 o superior.
-- Dispositivo con acelerómetro.
+---
 
-### PC
-- Windows 10 o superior.
-- Teclado.
-- Resolución recomendada: 1920 × 1080.
+## ▶️ Instrucciones de Ejecución
 
-## ▶️ Ejecución
+### 📱 Android
 
-### Android
+1. Descargar el archivo `.apk` en el dispositivo móvil.
+2. Instalar la aplicación.
+3. Abrir el juego y controlar el vehículo inclinando el dispositivo.
 
-Instalar el archivo APK y abrir la aplicación.
+### 🖥️ PC
 
-### PC
+1. Descargar y descomprimir la compilación para PC.
+2. Ejecutar el archivo `Drive Without Limits.exe`.
+3. Utilizar las teclas **WASD** para conducir y **ESC** para pausar.
 
-Ejecutar el archivo `.exe`.
+---
+
+## 👨‍💻 Autor
+
+**Juan Ignacio Villagra** — Desarrollador del proyecto.
+
+Proyecto desarrollado de manera individual.
