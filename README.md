@@ -108,7 +108,7 @@ El proyecto incluye documentación técnica sobre el desarrollo y la adaptación
 2. Ejecutar el archivo `Drive Without Limits.exe`.
 3. Utilizar las teclas **WASD** para conducir y **ESC** para pausar.
 
----
+----
 
 ## 👨‍💻 Autor
 
